@@ -1,7 +1,7 @@
 package com.knoldus
 
-import com.knoldus.constant.Const
-import com.knoldus.model.Point
+import com.knoldus.constant.{Color, Const}
+import com.knoldus.model.{ColorPoint, Point}
 import org.apache.log4j.Logger
 
 object Equality extends App {
@@ -14,5 +14,11 @@ object Equality extends App {
 
   Output.info(FirstPoint == SecondPoint)
   Output.info(FirstPoint == ThirdPoint)
+
+  val FirstColourPoint = new ColorPoint[Int](1, 2, Color.Red)
+  val SecondColourPoint = new ColorPoint[Int](1, 2, Color.Green)
+
+  Output.info(FirstPoint == FirstColourPoint)
+  Output.info(FirstPoint == FirstPoint)
 
 }
